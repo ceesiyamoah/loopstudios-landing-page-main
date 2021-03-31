@@ -1,0 +1,27 @@
+:root {
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(0, 0%, 0%);
+	--color-dark-grey: hsl(0, 0%, 55%);
+	--color-very-dark-gray: hsl(0, 0%, 41%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	margin: 0;
+	font-size: 93.75%; //!15px 15/16
+}
+
+body {
+	font-family: Josefin Sans, sans-serif;
+}
