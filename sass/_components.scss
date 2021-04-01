@@ -1,0 +1,49 @@
+.logo {
+	margin-right: auto;
+}
+
+//*Nav
+
+.nav {
+	color: var(--color-white);
+
+	&__list {
+		list-style: none;
+		display: flex;
+	}
+
+	&__item {
+		padding: 2rem;
+	}
+
+	&__link:link,
+	&__link:visited {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+		cursor: pointer;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+
+		&::before {
+			content: '';
+			width: 50%;
+			position: absolute;
+			background-color: currentColor;
+			height: 2px;
+			bottom: -75%;
+			left: 25%;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s;
+		}
+	}
+
+	&__link:hover::before {
+		opacity: 1;
+		visibility: visible;
+	}
+}
