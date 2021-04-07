@@ -3,6 +3,7 @@
 	--color-black: hsl(0, 0%, 0%);
 	--color-dark-grey: hsl(0, 0%, 55%);
 	--color-very-dark-gray: hsl(0, 0%, 41%);
+	--padding-horizontal: 12rem;
 }
 * {
 	margin: 0;
@@ -20,8 +21,12 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	font-size: 93.75%; //!15px 15/16
+	@media only screen and (max-width: 375px) {
+		font-size: 75%;
+	}
 }
 
 body {
 	font-family: Josefin Sans, sans-serif;
+	font-size: inherit;
 }
