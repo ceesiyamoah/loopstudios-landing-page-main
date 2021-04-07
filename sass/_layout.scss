@@ -29,6 +29,9 @@
 			& > nav {
 				display: none;
 			}
+			& > .logo {
+				z-index: 10000;
+			}
 		}
 	}
 	&__text {
@@ -139,7 +142,9 @@
 	}
 	&__items {
 		position: relative;
-		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 24px;
 		height: 24px;
 
