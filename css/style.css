@@ -19,9 +19,12 @@ html {
   box-sizing: border-box;
   margin: 0;
   font-size: 93.75%; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     html {
       font-size: 75%; } }
+  @media only screen and (max-width: 324px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: Josefin Sans, sans-serif;
@@ -30,7 +33,7 @@ body {
 .container {
   width: 100%;
   height: 100%; }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 600px) {
     .container {
       width: 100vw; } }
 
@@ -40,16 +43,16 @@ body {
   padding: 3rem var(--padding-horizontal) 11rem var(--padding-horizontal);
   display: flex;
   flex-direction: column; }
-  @media only screen and (max-width: 23.4375em) {
+  @media only screen and (max-width: 1100px) {
     .header {
-      width: 100vw;
-      padding: 3rem 2rem; } }
+      padding: 3rem 2rem;
+      background-color: red; } }
   .header__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8rem; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .header__top > nav {
         display: none; }
       .header__top > .logo {
@@ -63,7 +66,7 @@ body {
     flex-wrap: wrap;
     text-transform: uppercase;
     flex-basis: 40%; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 1440px) {
       .header__text {
         font-size: 3.2rem;
         padding: 1rem;
@@ -72,14 +75,14 @@ body {
 .main {
   padding: 0 var(--padding-horizontal);
   margin-top: 10rem; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .main {
-      padding: 0 1.5rem; } }
+      padding: 0; } }
 
 .creation {
   margin: 10rem 0;
   position: relative; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .creation {
       margin: 5rem 0;
       padding: 3rem 2rem; } }
@@ -88,7 +91,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5rem; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .creation__top {
         justify-content: center; }
         .creation__top > .btn {
@@ -100,7 +103,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     gap: 20px; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 1100px) {
       .creation__main {
         display: flex;
         flex-direction: column; } }
@@ -111,7 +114,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--color-white); }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .footer {
       padding: 1rem; }
       .footer > * {
@@ -127,7 +130,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .footer__bottom > nav > ul {
         display: flex;
         flex-direction: column;
@@ -139,7 +142,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .footer__socials {
         margin-top: 1rem; } }
   .footer__items {
@@ -168,14 +171,14 @@ body {
   .footer__icon {
     width: 100%;
     height: 100%; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .footer__icon {
         width: 80%;
         height: 80%; } }
 
 .logo {
   margin-right: auto; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .logo {
       width: 100px; } }
 
@@ -188,7 +191,10 @@ body {
     position: relative; }
   .nav__item {
     margin: 0 1rem; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 650px) {
+      .nav__item {
+        margin: 0 0.5rem; } }
+    @media only screen and (max-width: 600px) {
       .nav__item {
         margin: 0 0 0.5rem 0; } }
     .nav__item:first-child {
@@ -220,7 +226,7 @@ body {
 
 .description {
   position: relative; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 1100px) {
     .description {
       padding: 0 1.5rem;
       display: flex;
@@ -243,7 +249,11 @@ body {
       line-height: 1.5;
       font-weight: 600;
       color: var(--color-dark-grey); }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 1330px) {
+      .description__text {
+        padding: 2rem;
+        padding-bottom: 0; } }
+    @media only screen and (max-width: 1100px) {
       .description__text {
         position: relative;
         padding: 0;
@@ -256,9 +266,9 @@ body {
   font-size: 3rem;
   text-transform: uppercase; }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 600px) {
   .heading {
-    font-size: 2rem; } }
+    font-size: 1.5rem; } }
 
 .btn {
   background-color: var(--color-white);
@@ -277,7 +287,7 @@ body {
 .figure {
   position: relative;
   cursor: pointer; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .figure {
       height: 200px;
       background-size: cover;
@@ -309,7 +319,7 @@ body {
   display: none;
   top: 2.9rem;
   right: 0.5rem; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     .menu {
       display: inline-block; } }
   .menu__checkbox {
@@ -355,7 +365,7 @@ body {
     width: 0;
     display: none;
     padding: 2rem; }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 600px) {
       .menu__nav {
         display: block; } }
   .menu__list {
@@ -384,5 +394,5 @@ body {
       display: flex;
       opacity: 1; }
   .menu__checkbox:checked ~ .menu__background {
-    transform: scale(20);
+    transform: scale(80);
     background-color: black; }
