@@ -1,14 +1,14 @@
+//*LOGO
 .logo {
 	margin-right: auto;
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 37.5em) {
 		width: 100px;
 	}
 }
 
-//*Nav
-
+//*NAV
 .nav {
-	color: var(--color-white);
+	color: var(--color-var(--color-white));
 
 	&__list {
 		list-style: none;
@@ -19,10 +19,10 @@
 
 	&__item {
 		margin: 0 1rem;
-		@media only screen and (max-width: 650px) {
+		@media only screen and (max-width: 46.875em) {
 			margin: 0 0.5rem;
 		}
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			margin: 0 0 0.5rem 0;
 		}
 		&:first-child {
@@ -33,13 +33,16 @@
 		}
 	}
 
-	&__link:link,
-	&__link:visited {
-		color: white;
-		text-decoration: none;
-		font-weight: bold;
-		cursor: pointer;
-		position: relative;
+	&__link {
+		&,
+		&:link,
+		&:visited {
+			color: var(--color-white);
+			text-decoration: none;
+			font-weight: bold;
+			cursor: pointer;
+			position: relative;
+		}
 
 		&:not(:last-child) {
 			margin-right: 1rem;
@@ -65,11 +68,11 @@
 	}
 }
 
+//*DESCRIPTION
 .description {
 	position: relative;
 
-	@media only screen and (max-width: 1100px) {
-		padding: 0 1.5rem;
+	@media only screen and (max-width: 83.125em) {
 		display: flex;
 		flex-direction: column;
 	}
@@ -83,7 +86,7 @@
 			font-weight: 600;
 			color: var(--color-dark-grey);
 		}
-		background-color: white;
+		background-color: var(--color-white);
 		position: absolute;
 		width: 50%;
 		bottom: 0;
@@ -93,12 +96,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		@media only screen and (max-width: 1330px) {
-			padding: 2rem;
-			padding-bottom: 0;
-		}
 
-		@media only screen and (max-width: 1100px) {
+		@media only screen and (max-width: 83.125em) {
 			position: relative;
 			padding: 0;
 			height: 100%;
@@ -109,20 +108,20 @@
 	}
 }
 
-//*Heading
+//*HEADING
 .heading {
 	&-primary {
 		font-size: 3rem;
 		text-transform: uppercase;
 	}
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 37.5em) {
 		font-size: 1.5rem;
 	}
 }
 
-//*button-regular
+//*BUTTON
 .btn {
-	background-color: var(--color-white);
+	background-color: var(--color-var(--color-white));
 	border: 2px solid var(--color-black);
 	padding: 0.5rem 2rem;
 	letter-spacing: 2px;
@@ -139,14 +138,14 @@
 	}
 }
 
-//*Figure
+//*FIGURE
 
 .figure {
 	position: relative;
 	cursor: pointer;
-	@media only screen and (max-width: 600px) {
+
+	@media only screen and (max-width: 37.5em) {
 		height: 200px;
-		background-size: cover;
 		overflow: hidden;
 		&:not(:last-child) {
 			margin-bottom: 1rem;
@@ -157,6 +156,8 @@
 		margin: 0;
 		display: block;
 		width: 100%;
+		object-fit: cover;
+
 		filter: brightness(70%);
 	}
 	&__caption {
@@ -165,9 +166,13 @@
 
 		text-transform: uppercase;
 		font-size: 2rem;
-		color: white;
+		color: var(--color-white);
 		max-width: 20%;
 		padding: 2rem;
+
+		@media only screen and (max-width: 68.75em) and (min-width: 46.875em) {
+			font-size: 6rem;
+		}
 	}
 
 	@media only screen and (hover: hover) {
@@ -176,12 +181,12 @@
 		}
 
 		&:hover &__caption {
-			color: black;
+			color: var(--color-black);
 		}
 	}
 }
 
-//*Menu
+//*MENU
 .menu {
 	z-index: 1000;
 	position: fixed;
@@ -189,7 +194,7 @@
 	top: 2.9rem;
 	right: 0.5rem;
 
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 37.5em) {
 		display: inline-block;
 	}
 
@@ -219,7 +224,7 @@
 		&,
 		&::before,
 		&::after {
-			background-color: white;
+			background-color: var(--color-white);
 			width: 18px;
 			height: 1px;
 			display: inline-block;
@@ -236,17 +241,15 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		//background-color: black;
-		width: 6rem;
-		height: 6rem;
+
+		width: 1rem;
+		height: 1rem;
 		border-radius: 100px;
 
-		//	z-index: 100000;
 		transition: all 0.4s;
 	}
 
 	&__nav {
-		//background-color: red;
 		opacity: 100000;
 		position: fixed;
 		top: 100px;
@@ -254,25 +257,25 @@
 		width: 0;
 		display: none;
 		padding: 2rem;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			display: block;
 		}
 	}
 
 	&__list {
-		//	display: flex;
 		flex-direction: column;
 		list-style: none;
-		opacity: 0;
-		transition: all 0.2 0.2s;
+		transition: all 0.2s 0.2s;
+		margin-top: 10rem;
+		display: none;
 	}
 	&__item {
-		margin-top: 1.5rem;
+		margin-top: 3rem;
 	}
 	&__link {
 		&:link,
 		&:visited {
-			color: white;
+			color: var(--color-white);
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 2rem;
@@ -292,13 +295,14 @@
 	}
 	&__checkbox:checked ~ &__nav {
 		width: 100%;
-		& .menu__list {
-			display: flex;
-			opacity: 1;
-		}
+		display: block;
+	}
+	&__checkbox:checked ~ &__nav &__list {
+		display: flex;
+		opacity: 1;
 	}
 	&__checkbox:checked ~ &__background {
-		transform: scale(80);
-		background-color: black;
+		transform: scale(200);
+		background-color: var(--color-black);
 	}
 }

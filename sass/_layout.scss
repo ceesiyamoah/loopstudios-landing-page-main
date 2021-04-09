@@ -1,11 +1,13 @@
+//*CONTAINER
 .container {
 	width: 100%;
 	height: 100%;
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 37.5em) {
 		width: 100vw;
 	}
 }
 
+//*HEADER
 .header {
 	background-image: url('../images/desktop/image-hero.jpg');
 	background-size: cover;
@@ -14,7 +16,7 @@
 	display: flex;
 	flex-direction: column;
 
-	@media only screen and (max-width: 1100px) {
+	@media only screen and (max-width: 68.75em) {
 		padding: 3rem 2rem;
 		background-color: red;
 	}
@@ -25,7 +27,7 @@
 		align-items: center;
 
 		margin-bottom: 8rem;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			& > nav {
 				display: none;
 			}
@@ -52,18 +54,20 @@
 	}
 }
 
+//*MAIN
 .main {
 	padding: 0 var(--padding-horizontal);
 	margin-top: 10rem;
-	@media only screen and (max-width: 600px) {
-		padding: 0;
+	@media only screen and (max-width: 68.75em) {
+		padding: 2rem;
 	}
 }
 
+//*CREATION
 .creation {
-	margin: 10rem 0;
+	margin: 5rem 0;
 	position: relative;
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 37.5em) {
 		margin: 5rem 0;
 		padding: 3rem 2rem;
 	}
@@ -72,7 +76,7 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 5rem;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			justify-content: center;
 			& > .btn {
 				position: absolute;
@@ -86,20 +90,25 @@
 		grid-template-columns: repeat(4, 1fr);
 		justify-content: space-between;
 		gap: 20px;
-		@media only screen and (max-width: 1100px) {
+		@media only screen and (max-width: 68.75em) {
 			display: flex;
 			flex-direction: column;
 		}
 	}
 }
 
+//*FOOTER
 .footer {
 	background-color: var(--color-black);
 	padding: 2rem var(--padding-horizontal);
 	display: flex;
 	flex-direction: column;
-	color: var(--color-white);
-	@media only screen and (max-width: 600px) {
+	color: var(--color-var(--color-white));
+
+	@media only screen and (max-width: 68.75em) {
+		padding: 2rem;
+	}
+	@media only screen and (max-width: 46.875em) {
 		padding: 1rem;
 		& > * {
 			flex-direction: column;
@@ -119,7 +128,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			& > nav > ul {
 				display: flex;
 				flex-direction: column;
@@ -136,7 +145,7 @@
 		list-style: none;
 		display: flex;
 		align-items: center;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			margin-top: 1rem;
 		}
 	}
@@ -157,7 +166,7 @@
 				position: absolute;
 				width: 100%;
 				bottom: -0.5rem;
-				background-color: white;
+				background-color: var(--color-white);
 				height: 1.5px;
 				margin: 0 auto;
 				opacity: 0;
@@ -172,7 +181,7 @@
 	&__icon {
 		width: 100%;
 		height: 100%;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 37.5em) {
 			width: 80%;
 			height: 80%;
 		}
